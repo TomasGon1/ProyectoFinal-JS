@@ -11,8 +11,8 @@ function calculadora() {
         "Ingrese otro número (si su elecion fue la operacion 5 no ingrese nada)"
       )
     );
-    let impuesto = numero1 * 0.75;
-    let impuesto2 = impuesto + numero1;
+    const impuesto = numero1 * 0.75;
+    const impuesto2 = impuesto + numero1;
 
     switch (operacion) {
       case "1":
