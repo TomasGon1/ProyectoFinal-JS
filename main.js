@@ -4,7 +4,7 @@ function calculadora() {
   );
   let resultado = 0;
 
-  while (operacion != "ESC") {
+  while (operacion !== "ESC") {
     let numero1 = Number(prompt("Ingrese un número"));
     let numero2 = Number(
       prompt(
