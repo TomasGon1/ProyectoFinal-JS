@@ -40,6 +40,8 @@ function calculadora() {
 
       default:
         alert("Datos incorrectos");
+        calculadora();
+        break;
     }
 
     alert(`El resultado es ${resultado}`);
