@@ -29,7 +29,9 @@ const donadoresClient = [];
 /* Funciones de la pagina */
 function menu() {
   let opciones = parseInt(
-    prompt("1)Ver perros en adopcion 2)Ver gatos en adopcion 3)Donar 4)Salir")
+    prompt(
+      "1)Ver perros disponibles \n 2)Ver gatos disponibles \n 3)Buscar perros en adopcion \n 4)Buscar gatos en adopcion \n 5)Donar \n 6)Salir"
+    )
   );
   return opciones;
 }
@@ -68,6 +70,24 @@ function gatosAdopcion() {
   }
 }
 
+function perritosAdop() {
+  for (const adopcionP of perros) {
+    alert(`
+    Raza: ${adopcionP.razaP}
+    Edad: ${adopcionP.edadP}
+    `);
+  }
+}
+
+function gatitosAdop() {
+  for (const adopcionG of gatos) {
+    alert(`
+    Raza: ${adopcionG.razaG}
+    Edad: ${adopcionG.edadG}
+    `);
+  }
+}
+
 function donaciones() {
   alert(
     "Bienvenido a nuestro sistema de donaciones!! (sus datos no seran publicados)"
@@ -90,19 +110,26 @@ function salir() {
 let menu1 = menu();
 switch (menu1) {
   case 1:
-    perrosAdopcion();
+    perritosAdop();
     break;
 
   case 2:
-    gatosAdopcion();
-
+    gatitosAdop();
     break;
 
   case 3:
-    donaciones();
+    perrosAdopcion();
     break;
 
   case 4:
+    gatosAdopcion();
+    break;
+
+  case 5:
+    donaciones();
+    break;
+
+  case 6:
     salir();
     break;
 
