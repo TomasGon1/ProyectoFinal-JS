@@ -1,0 +1,25 @@
+label,
+input,
+button {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+  font-family: "Tilt Warp", cursive;
+}
+
+h3 {
+  font-size: 1rem;
+  font-family: "Tilt Warp", cursive;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.btn1 {
+  margin-bottom: 0.7rem;
+}
+
+p {
+  font-size: 1.3rem;
+  margin-left: 0.7rem;
+  margin-bottom: 0.5rem;
+  font-family: "Tilt Warp", cursive;
+}
