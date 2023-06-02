@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- links de estilos -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style/style.css" />
     <!-- google fonts -->
     <link
@@ -15,22 +21,75 @@
       href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap"
       rel="stylesheet"
     />
+    <!-- iconos -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>ZonaPet - Adopciones</title>
   </head>
   <body>
     <h1 class="tittle">Refugio ZonaPet</h1>
+
+    <button class="btn2 btn btn-primary" id="irADonaciones">
+      <a href="donaciones.html">Donanos!!</a>
+    </button>
+
     <h2 class="sub-tittle">Animalitos en adopcion:</h2>
 
-    <section class="card-adopts">
-      <div class="cards" id="containerAdopts"></div>
-    </section>
+    <!-- animales en adopcion -->
+    <div class="row" id="containerAdopts"></div>
 
-    <h2 class="sub-tittle">Lista de adopciones:</h2>
-    <button class="btn1" id="btnArrepentimiento">Arrepentirse</button>
+    <div class="wave">
+      <img src="images/wave.svg" alt="oleaje decorativo" />
+    </div>
 
-    <div class="row" id="containerAdoptados"></div>
+    <main>
+      <h2 class="sub-tittle">Lista de adopciones:</h2>
+      <button class="btn3 btn btn-primary" id="btnVerAdopciones">
+        Ver Adopciones
+      </button>
 
-    <script src="js/animales.js"></script>
+      <button class="btn3 btn btn-primary" id="btnArrepentimiento">
+        Arrepentirse
+      </button>
+
+      <!-- tabla de adopciones -->
+      <div class="row py-3" id="containerAdoptados"></div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-sm">
+        <div class="container__footer">
+          <div class="footer-sm__icons">
+            <div>Buscanos en las redes!</div>
+            <!-- Iconos redes -->
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container__footer">
+          <div class="footer-bottom__copyright">
+            &copy; Copyright 2023 <a href="#">ZonaPet</a> | Creada por
+            <a href="https://github.com/TomasGon1">TomasG.</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Script -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
     <script src="js/main.js"></script>
   </body>
 </html>

@@ -52,12 +52,12 @@ function mostrarTabla() {
   donaciones.forEach((donacion) => {
     const div = document.createElement("div");
     div.innerHTML = `
-                     <div>
-                        <p>Nombre del Donador: ${donacion.nombreDonador}</p>
-                        <p>Apellido del Donador: ${donacion.apellidoDonador}</p>
-                        <p>Monto Donado: $${donacion.montoDonador}</p>
+                     <div class="containerDonadores">
+                        <p class="donador">Nombre del Donador: ${donacion.nombreDonador}</p>
+                        <p class="donador">Apellido del Donador: ${donacion.apellidoDonador}</p>
+                        <p class="donador">Monto Donado: $${donacion.montoDonador}</p>
                         </div>
-                        <br /><br />
+                        
 
         `;
     tablaDonadores.appendChild(div);
