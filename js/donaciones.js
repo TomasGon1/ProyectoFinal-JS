@@ -57,7 +57,7 @@ function mostrarTabla() {
                         <p class="donador">Apellido del Donador: ${donacion.apellidoDonador}</p>
                         <p class="donador">Monto Donado: $${donacion.montoDonador}</p>
                         </div>
-                        
+                        <br />
 
         `;
     tablaDonadores.appendChild(div);

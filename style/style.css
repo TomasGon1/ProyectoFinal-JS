@@ -9,7 +9,6 @@
 
 body {
   background-color: green;
-  min-height: 100vh;
 }
 
 .navBarItem {
@@ -77,8 +76,7 @@ body {
 
 main {
   background-color: white;
-  margin-top: -1.5rem;
-  min-height: auto;
+  margin-top: -2rem;
 }
 
 /* Style Donaciones */
@@ -128,7 +126,6 @@ button {
 footer {
   background-color: black;
   padding-top: 1rem;
-  min-width: 100vh;
 }
 
 .footer-sm {

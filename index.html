@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- links de estilos -->
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -32,28 +33,28 @@
     <title>ZonaPet - Adopciones</title>
   </head>
   <body>
-    <h1 class="tittle">Refugio ZonaPet</h1>
+    <header>
+      <h1 class="tittle">Refugio ZonaPet</h1>
 
-    <ul class="navBar">
-      <li class="navBarItem">
-        <a href="donaciones.html"
-          ><button class="btn2 btn btn-primary">
-            Donanos!!
-          </button></a
-        >
-      </li>
-    </ul>
+      <ul class="navBar">
+        <li class="navBarItem">
+          <a href="donaciones.html">
+            <button class="btn2 btn btn-primary">Donanos!!</button>
+          </a>
+        </li>
+      </ul>
+    </header>
 
     <h2 class="sub-tittle">Animalitos en adopcion:</h2>
 
     <!-- animales en adopcion -->
-    <div class="row" id="containerAdopts"></div>
+    <div class="row container-fluid" id="containerAdopts"></div>
 
     <div class="wave">
       <img src="images/wave.svg" alt="oleaje decorativo" />
     </div>
 
-    <main>
+    <main class="container-fluid">
       <h2 class="sub-tittle">Lista de adopciones:</h2>
       <button class="btn3 btn btn-primary" id="btnVerAdopciones">
         Ver Adopciones
@@ -64,7 +65,7 @@
       </button>
 
       <!-- tabla de adopciones -->
-      <div class="row py-3" id="containerAdoptados"></div>
+      <div class="row py-3 container-fluid" id="containerAdoptados"></div>
     </main>
 
     <!-- Footer -->
@@ -91,6 +92,7 @@
     </footer>
 
     <!-- Script -->
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
