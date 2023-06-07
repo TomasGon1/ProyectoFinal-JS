@@ -103,6 +103,11 @@ button {
   font-family: "Tilt Warp", cursive;
 }
 
+.btn2 {
+  font-size: 1.2rem;
+  font-family: "Tilt Warp", cursive;
+}
+
 .donador {
   font-size: 1.3rem;
   margin-left: 0.7rem;

@@ -94,7 +94,3 @@ arrepentirse.addEventListener("click", () => {
   sistemaAdopcion.splice(0, sistemaAdopcion.length);
   actualizarTabla();
 });
-
-/* Boton de donacion */
-const donar = document.getElementById("irADonaciones");
-donar.addEventListener("click")
