@@ -75,8 +75,8 @@ function actualizarTabla() {
                  <p class="card-info2"> Raza: ${animal.raza}. Edad: ${animal.edad} </p>
                  <button onClick="cancelarAdopcion(${animal.id})" class="btn3 btn btn-primary"> Cancelar Adopcion </button>
                 </div>
-            </div>
-    `;
+             </div>
+            `;
   });
 
   containerAdoptados.innerHTML = aux;
@@ -86,13 +86,41 @@ function actualizarTabla() {
 const cancelarAdopcion = (id) => {
   const animal = sistemaAdopcion.find((animal) => animal.id === id);
   sistemaAdopcion.splice(sistemaAdopcion.indexOf(animal), 1);
-  actualizarTabla();
+
+  Swal.fire({
+    tittle: "¿Estas seguro?",
+    text: "¿Desea cancelar la adopcion? 😥",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Si, cancelar!",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire("Listo!", "La adopcion ha sido cancelada.", "Hecho");
+      actualizarTabla();
+    }
+  });
 };
 
 const arrepentirse = document.getElementById("btnArrepentimiento");
 arrepentirse.addEventListener("click", () => {
   sistemaAdopcion.splice(0, sistemaAdopcion.length);
-  actualizarTabla();
+
+  Swal.fire({
+    tittle: "¿Estas seguro?",
+    text: "¿Desea cancelar las adopciones? 😥",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonColor: "#3085d6",
+    cancelButtonColor: "#d33",
+    confirmButtonText: "Si, cancelar!",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire("Listo!", "Las adopciones han sido canceladas", "Hecho");
+      actualizarTabla();
+    }
+  });
 });
 
 /* Boton de ir arriba */

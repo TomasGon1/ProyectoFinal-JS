@@ -38,6 +38,13 @@ function agregarDonacion() {
 
   localStorage.setItem("donaciones", JSON.stringify(donaciones));
   formulario.reset();
+  Swal.fire({
+    position: "center",
+    icon: "success",
+    title: "Listo, ya has donado. Muchas gracias!!",
+    showConfirmButton: false,
+    timer: 1500,
+  });
 }
 
 const tablaDonadores = document.getElementById("tablaDonadores");
