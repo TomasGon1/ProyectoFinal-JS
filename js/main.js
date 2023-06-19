@@ -31,10 +31,26 @@ const animales = [
 /* Agregar animeles a la pagina principal */
 const containerAdopts = document.getElementById("containerAdopts");
 
-animales.forEach((animal) => {
-  const divAnimales = document.createElement("div");
-  divAnimales.classList.add("card-info", "col-xl-3", "col-md-6", "col-sm-12");
-  divAnimales.innerHTML = `
+const traerAnimales = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(animales);
+      reject("No hay nada que mostrar, intente mas tarde");
+    }, 3000);
+  });
+};
+
+traerAnimales()
+  .then((response) => {
+    animales.forEach((animal) => {
+      const divAnimales = document.createElement("div");
+      divAnimales.classList.add(
+        "card-info",
+        "col-xl-3",
+        "col-md-6",
+        "col-sm-12"
+      );
+      divAnimales.innerHTML = `
                           <div>
                            <div class="card-description">
                             <img src="images/${animal.id}.jpg" class="card-img-top img-fluid py-3">
@@ -43,12 +59,14 @@ animales.forEach((animal) => {
                             <button id="boton${animal.id}" class="btn3 btn btn-primary"> Adoptar! </button>
                            </div>
                           </div>`;
-  containerAdopts.appendChild(divAnimales);
-  const boton = document.getElementById(`boton${animal.id}`);
-  boton.addEventListener("click", () => {
-    confirmarAdopcion(animal.id);
-  });
-});
+      containerAdopts.appendChild(divAnimales);
+      const boton = document.getElementById(`boton${animal.id}`);
+      boton.addEventListener("click", () => {
+        confirmarAdopcion(animal.id);
+      });
+    });
+  })
+  .catch((error) => console.log(error));
 
 const sistemaAdopcion = [];
 
