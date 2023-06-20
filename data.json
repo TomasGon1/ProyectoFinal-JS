@@ -1,0 +1,10 @@
+[
+  { "id": 1, "nombre": "Tobi", "raza": "Pastor Aleman", "edad": 4 },
+  { "id": 2, "nombre": "Firulais", "raza": "Dogo Argentino", "edad": 8 },
+  { "id": 3, "nombre": "Zeuz", "raza": "Mastin Tibetano", "edad": 1 },
+  { "id": 4, "nombre": "Rosa", "raza": "Shiba Inu", "edad": 2 },
+  { "id": 5, "nombre": "Negrito", "raza": "Bombay", "edad": 2 },
+  { "id": 6, "nombre": "Salmon", "raza": "Bengali", "edad": 4 },
+  { "id": 7, "nombre": "Tatin", "raza": "Siberiano", "edad": 9 },
+  { "id": 8, "nombre": "Mishifu", "raza": "Siames", "edad": 6 }
+]
