@@ -31,7 +31,7 @@ const getAnimales = async () => {
     });
   });
 
-  const sistemaAdopcion = [];
+  const sistemaAdopcion = JSON.parse(sessionStorage.getItem("adopcion")) || [];
 
   const confirmarAdopcion = (id) => {
     const mascotas = data.find((animal) => animal.id === id);
@@ -58,10 +58,17 @@ const getAnimales = async () => {
                 </div>
              </div>
             `;
+      savelocal();
     });
 
     containerAdoptados.innerHTML = aux;
   }
+
+  /* storage */
+
+  const savelocal = () => {
+    sessionStorage.setItem("adopcion", JSON.stringify(sistemaAdopcion));
+  };
 
   /* Boton de Cancelacion */
   const arrepentirse = document.getElementById("btnArrepentimiento");
